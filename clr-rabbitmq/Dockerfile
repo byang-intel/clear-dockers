@@ -15,6 +15,7 @@ RUN mkdir -p /etc/sudoers.d/
 RUN echo "%root ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/root
 
 RUN install -d -m 0700 -orabbitmq -grabbitmq /var/lib/rabbitmq/
+RUN install -d -m 0700 -orabbitmq -grabbitmq /var/log/rabbitmq
 
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 RUN mkdir -p /etc/rabbitmq/
