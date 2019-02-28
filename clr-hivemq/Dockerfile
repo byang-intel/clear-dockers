@@ -27,7 +27,7 @@ RUN chmod +x /usr/local/bin/tini
 
 # HiveMQ setup
 RUN mkdir -p /opt/
-COPY config.xml /opt/config.xml
+COPY clr-hivemq/config.xml /opt/config.xml
 RUN curl -k -L https://www.hivemq.com/releases/hivemq-${HIVEMQ_VERSION}.zip -o /opt/hivemq-${HIVEMQ_VERSION}.zip \
     && unzip /opt/hivemq-${HIVEMQ_VERSION}.zip  -d /opt/\
     && rm -f /opt/hivemq-${HIVEMQ_VERSION}.zip \
